@@ -1,0 +1,393 @@
+@import '~bootstrap/dist/css/bootstrap';
+
+$dark-blue: #00263a;
+$light-blue: #008195;
+$grey: #4d4d4d;
+$light-grey: #e4e4e4;
+$white: #fff;
+$red: #e40520;
+
+// overrides
+#s4-bodyContainer{
+  padding-bottom: 35px;
+}
+
+body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, .ms-rtestate-field h1, h1.ms-rteElement-H1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+h2, .ms-rtestate-field h2, h2.ms-rteElement-H2 {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+h3 {
+  font-size: 2.4em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+h4 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+p {
+  font-size: 1.4em;
+  color: $grey;
+}
+
+img {
+  max-width: 100%;
+}
+
+// re-usable
+
+.subtitle {
+  font-size: 1.8em;
+  color: $light-blue;
+}
+
+.flex-even {
+  flex: 1;
+}
+
+.btn-rounded, .btn-rounded:visited {
+  border-color: $dark-blue;
+  background-color: $white;
+  color: $dark-blue;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 0 2.6em;
+
+  &:hover {
+    color: $white;
+    background-color: $dark-blue;
+  }
+}
+
+// specific
+
+header {
+  margin-top: 3em;
+  margin-bottom: 6em;
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  .header a, .header a:visited {
+    position: relative;
+    font-size: 1.4em;
+    color: $grey;
+    font-weight: bold;
+    line-height: 3.5em;
+    display: inline-block;
+    padding: 1em 1.8em;
+    padding-bottom: 0.25em;
+
+    &.active {
+      background-color: $dark-blue;
+      color: #fff;
+    }
+
+    &:not(.active) {
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 80%;
+        height: 4px;
+        background: rgba($light-blue, 0.1);
+        content: "";
+        opacity: 0;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        -webkit-transform: translateY(0px) translateX(-50%);
+        -moz-transform: translateY(0px) translateX(-50%);
+        transform: translateY(0px) translateX(-50%);
+      }
+
+      &:hover {
+        color: $grey;
+        text-decoration: none;
+
+        &::after {
+          opacity: 1;
+          background: rgba($light-blue, 1);
+          transform: translateY(-10px) translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .search {
+    display: inline-block;
+    margin-left: 1em;
+    border: 1px solid $grey;
+
+    input {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 1em;
+      font-size: 1.4em;
+      width: 230px;
+    }
+
+    button {
+      border: none;
+      height: 3em;
+    }
+
+    img {
+      width: 2.6em;
+      margin-right: 1em;
+      padding-bottom: 0.3em;
+    }
+  }
+}
+
+footer {
+  background-color: $light-grey;
+  padding: 4em 0;
+  position: relative;
+  height: auto;
+
+  h4 {
+    font-weight: normal;
+    color: $grey;
+    font-size: 1.8em;
+    margin-bottom: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li a, li a:visited {
+      border-top: 1px solid $grey;
+      color: $grey;
+      font-size: 1.2em;
+      padding: 0.8em 0;
+      display: block;
+      transition-duration: 0.15s;
+
+      &:hover{
+        text-decoration: none;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  background-color: $dark-blue;
+  color: $white;
+  font-size: 1.2em;
+  padding: 1em 0;
+}
+
+.light-banner {
+  position: relative;
+  background-color: $light-blue;
+  padding: 5em 0;
+  margin-top: 6em;
+
+  h2 {
+    color: $white;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+  .row {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+.dark-banner {
+  background-color: $dark-blue;
+
+  p {
+    color: $white;
+  }
+
+  h3 {
+    color: $white;
+  }
+}
+
+.explore-our-stories {
+  padding-right: 7em;
+  padding-top: 5em;
+}
+
+.pathway-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  margin: 2em;
+  margin-top: 7.5em;
+  padding: 0 3em !important;
+
+  .pathway-box-image {
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    top: -7.5em;
+    left: 0;
+    right: 0;
+  }
+
+  h3 {
+    margin-top: 4em;
+    margin-bottom: 0.7em;
+    color: $light-blue;
+  }
+
+  .btn-primary {
+    border-color: $red;
+    background-color: $white;
+    color: $red;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0 0.5em;
+    
+    &:hover {
+      color: $white;
+      background-color: $red;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+
+  img {
+    position: relative;
+    top: 50%;
+    width: 1.6em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+.subnav {
+  background-color: $dark-blue;
+  padding-top: 5em;
+  padding-bottom: 3em;
+  display: none;
+
+  a, a:visited {
+    color: $light-blue;
+    font-size: 1.8em;
+    font-weight: bold;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &.close-subnav {
+      color: $red;
+      font-size: 1.2em;
+      &::after {
+        content: url('../images/close-up-arrow.png'); // causes error with parcel compiler, not sure why, still runs
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+.vision {
+  margin-top: 10em;
+  margin-bottom: 8em;
+}
+
+.vision-description {
+  margin-bottom: 3em;
+}
+
+.vision-box {
+  h3 {
+    margin-top: 1em;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      border-top: 1px solid $grey;
+      padding: 1em 0;
+      margin: 1em 0;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.pathway-sections {
+  background-color: $light-grey;
+  padding: 1.5em 0;
+  li {
+    color: $grey;
+    font-size: 1.2em;
+    span {
+      border-top: 1px solid $grey;
+      display: block;
+      padding: 0.5em 0;
+    }
+  }
+
+}
+
+.charts {
+  background-color: $light-grey;
+  padding: 2em 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  .row {
+    width: 200%;
+    margin: 0 auto;
+  }
+  .chart-node {
+    white-space: normal;
+    text-align: center;
+    height: 10em;
+    width: 10em;
+    background-color: $white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
