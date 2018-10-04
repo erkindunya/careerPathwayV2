@@ -37,6 +37,7 @@
     "airbnb-browser-shims": "^2.1.0",
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
+    "jquery-colorbox": "^1.6.4",
     "popper.js": "^1.12.9",
     "sp-pnp-js": "^3.0.4",
     "sweetalert": "^2.1.0",

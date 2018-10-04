@@ -24,18 +24,44 @@
 	<div height=100% class="ms-pagemargin"><IMG SRC="/_layouts/images/blank.gif" width=10 height=1 alt=""></div>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
+   
     <header>
         <div class="header container">
+        <div class="sharepoint-banner-toggle js-toggle-admin">
+            Admin
+        </div>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-md-3 col-lg-4">
                     <img class="logo" src="/sites/hrcareerpathways/_catalogs/masterpage/images/logo.png" alt="Kier">
                 </div>
-                <div class="col-lg-8 text-right">
-                    <a href="#" class="subnav-link js-toggle-subnav">Career Pathways</a>
-                    <a href="#">Career Stories</a>
-                    <div class="search">
-                        <input type="text" name="search-input" id="search-input" placeholder="Search a role">
-                        <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/search.png">
+                <div class="col-md-9 col-lg-8 top-nav">
+                    <div class="d-flex flex-column flex-md-row justify-content-end">
+
+                        <div class="d-flex link-container order-1 order-md-0 justify-content-around">
+                            <a href="#" class="nav-link subnav-link js-toggle-subnav">Career Pathways</a>
+                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Career-Stories-Landing.aspx" class="nav-link">Career Stories</a>
+                        </div>
+                        <div class="search order-0 order-md-1">
+                            <input type="text" name="search-input" id="search-input" placeholder="Search a role">
+                            <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/search.png">
+
+                            <div class="sub-search">
+                                <a href="#" class="nav-search-result">
+                                    <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                                
+                                <a href="#" class="nav-search-result">
+                                    <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                                
+                                <a href="#" class="nav-search-result">
+                                    <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,33 +69,33 @@
 
         <section class="subnav">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="#" class="row">
-                            <div class="col-sm-3">
+                <div class="d-flex flex-column flex-lg-row text-center">
+                    <div class="p-2 subnav-item  align-self-center">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                            <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/operational-finance.png" alt="Operational Finance">
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Operational Finance
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4">
-                        <a href="#" class="row">
-                            <div class="col-sm-3">
+                    <div class="p-2 subnav-item  align-self-center">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                            <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/fssc.png" alt="FSSC">
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Finance Shared Service Centre (FSSC)
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4">
-                        <a href="#" class="row">
-                            <div class="col-sm-3">
+                    <div class="p-2 subnav-item  align-self-center">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                            <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png" alt="Group Finance">
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Group Finance and Technical Specialisms
                             </div>
                         </a>
@@ -87,38 +113,57 @@
     <WebPartPages:WebPartZone runat="server" Title="<%$Resources:cms,WebPartZoneTitle_Header%>" ID="PageLayout"/>
      
 
-    <footer>
+       <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <h4>Career Pathways</h4>
                     <ul>
-                        <li><a href="#">Operational Finance</a></li>
-                        <li><a href="#">Financial Shared Service Centre FSSC</a></li>
-                        <li><a href="#">Group Finance and Technical Specialisms</a></li>
+                        <li>
+                            <a href="#">Operational Finance</a>
+                        </li>
+                        <li>
+                            <a href="#">Financial Shared Service Centre FSSC</a>
+                        </li>
+                        <li>
+                            <a href="#">Group Finance and Technical Specialisms</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4>Career Stories</h4>
                     <ul>
-                        <li><a href="">Lee Woodall</a></li>
-                        <li><a href="">David Hodson</a></li>
-                        <li><a href="">Ross Gallagher</a></li>
-                        <li><a href="">Emma Tarrant</a></li>
-                        <li><a href="">Ian Chapman</a></li>
+                        <li>
+                            <a href="">Lee Woodall</a>
+                        </li>
+                        <li>
+                            <a href="">David Hodson</a>
+                        </li>
+                        <li>
+                            <a href="">Ross Gallagher</a>
+                        </li>
+                        <li>
+                            <a href="">Emma Tarrant</a>
+                        </li>
+                        <li>
+                            <a href="">Ian Chapman</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4>Lorem ipsum</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem laudantium, fugiat
-                        animi blanditiis ut, quod maxime, modi error soluta numquam asperiores tempore! Eos, nostrum?
-                        Quo, dicta. Voluptas, ab voluptate?</p>
+                        animi blanditiis
+                        ut, quod maxime, modi error soluta numquam asperiores tempore! Eos, nostrum? Quo, dicta.
+                        Voluptas,
+                        ab voluptate?</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4>Lorem ipsum</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam inventore tenetur ipsam, quam
-                        in id consequuntur quasi ex est a pariatur cumque minima accusamus harum! Accusamus quas nisi
-                        hic?</p>
+                        in id
+                        consequuntur quasi ex est a pariatur cumque minima accusamus harum! Accusamus quas nisi hic?
+                    </p>
                 </div>
             </div>
         </div>
