@@ -25,14 +25,28 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
    
+   <div class="popup-container">
+        <div class="popup-content">
+            <div  class="btn-close close-popup">x</div>
+            <div class="popup-inner-content">
+                <h2 id="popup-title"></h2>
+                <ul id="popup-list" class="pathway-sections list-unstyled row">
+                </ul>
+
+            </div>
+        </div>
+   </div>
+
+    <div class="sharepoint-banner-toggle js-toggle-admin">
+        Admin
+    </div>
     <header>
         <div class="header container">
-        <div class="sharepoint-banner-toggle js-toggle-admin">
-            Admin
-        </div>
             <div class="row">
                 <div class="col-md-3 col-lg-4">
+                <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/index.aspx">
                     <img class="logo" src="/sites/hrcareerpathways/_catalogs/masterpage/images/logo.png" alt="Kier">
+                </a>
                 </div>
                 <div class="col-md-9 col-lg-8 top-nav">
                     <div class="d-flex flex-column flex-md-row justify-content-end">
@@ -71,7 +85,7 @@
             <div class="container">
                 <div class="d-flex flex-column flex-lg-row text-center">
                     <div class="p-2 subnav-item  align-self-center">
-                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=2" class="row">
                             <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/operational-finance.png" alt="Operational Finance">
                             </div>
@@ -81,7 +95,7 @@
                         </a>
                     </div>
                     <div class="p-2 subnav-item  align-self-center">
-                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=3" class="row">
                             <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/fssc.png" alt="FSSC">
                             </div>
@@ -91,7 +105,7 @@
                         </a>
                     </div>
                     <div class="p-2 subnav-item  align-self-center">
-                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx" class="row">
+                        <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=1" class="row">
                             <div class="col-sm-3 align-self-center">
                                 <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png" alt="Group Finance">
                             </div>
@@ -120,13 +134,13 @@
                     <h4>Career Pathways</h4>
                     <ul>
                         <li>
-                            <a href="#">Operational Finance</a>
+                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=2">Operational Finance</a>
                         </li>
                         <li>
-                            <a href="#">Financial Shared Service Centre FSSC</a>
+                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=3">Financial Shared Service Centre FSSC</a>
                         </li>
                         <li>
-                            <a href="#">Group Finance and Technical Specialisms</a>
+                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=1">Group Finance and Technical Specialisms</a>
                         </li>
                     </ul>
                 </div>
@@ -149,21 +163,6 @@
                             <a href="">Ian Chapman</a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4>Lorem ipsum</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem laudantium, fugiat
-                        animi blanditiis
-                        ut, quod maxime, modi error soluta numquam asperiores tempore! Eos, nostrum? Quo, dicta.
-                        Voluptas,
-                        ab voluptate?</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4>Lorem ipsum</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam inventore tenetur ipsam, quam
-                        in id
-                        consequuntur quasi ex est a pariatur cumque minima accusamus harum! Accusamus quas nisi hic?
-                    </p>
                 </div>
             </div>
         </div>

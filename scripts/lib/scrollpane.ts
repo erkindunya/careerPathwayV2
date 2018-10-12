@@ -1,8 +1,8 @@
-var $ = document.getElementById.bind(document),
-	container = $("scrollbar-container"),
-	content = $("scrollbar-content"),
-	scroll = $("scrollbar"),
-	scrollLower = $("scrollbar-lower");
+var jScroll = document.getElementById.bind(document),
+	container = jScroll("scrollbar-container"),
+	content = jScroll("scrollbar-content"),
+	scrollableBar = jScroll("scrollbar"),
+	scrollLower = jScroll("scrollbar-lower");
 
 content.addEventListener("scroll", function(e) {
 	// get scrollable width (the amount hanging off the edge of the screen)
@@ -10,8 +10,9 @@ content.addEventListener("scroll", function(e) {
 	// get percentage content scrolled
 	var percentScrolled = 100 / (scrollableWidth / content.scrollLeft);
 	//apply percentage to remaining scrollable width and set scrollLeft to result
-	scroll.style.left =
-		((container.clientWidth - scroll.clientWidth) / 100) * percentScrolled +
+	scrollableBar.style.left =
+		((container.clientWidth - scrollableBar.clientWidth) / 100) *
+			percentScrolled +
 		"px";
 	scrollLower.style.left =
 		((container.clientWidth - scrollLower.clientWidth) / 100) *
@@ -87,9 +88,9 @@ function addScrollbarTouchEvent(scrollbar) {
 }
 
 //desktop
-addScrollbarEvent(scroll);
+addScrollbarEvent(scrollableBar);
 addScrollbarEvent(scrollLower);
 
 // mobile
-addScrollbarTouchEvent(scroll);
+addScrollbarTouchEvent(scrollableBar);
 addScrollbarTouchEvent(scrollLower);

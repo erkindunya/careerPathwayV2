@@ -23,7 +23,24 @@ $red: #e40520;
 }
 
 #ms-designer-ribbon {
-	display: none;
+	// display: none;
+}
+
+#s4-workspace {
+	width: 100% !important;
+}
+
+#ms-designer-ribbon img {
+	max-width: none !important;
+}
+
+.ms-siteactions-imgspan>.ms-core-menu-buttonIcon {
+	max-width: none !important;
+	box-sizing: content-box !important;
+}
+
+#ms-designer-ribbon * {
+	box-sizing: content-box !important;
 }
 
 body {
@@ -115,6 +132,57 @@ img {
 	}
 }
 
+.popup-container {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+
+	.popup-content {
+		background-color: $white;
+		padding: 30px;
+		position: relative;
+		display: inline-block;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		-moz-transform: translateY(-50%) translateX(-50%);
+		transform: translateY(-50%) translateX(-50%);
+		width: 90%;
+		max-width: 700px;
+
+		h2 {
+			color: $light-blue;
+			margin-bottom: 0;
+		}
+
+		.btn-close {
+			border-color: $red;
+			background-color: $red;
+			color: $white;
+			width: 1.3em;
+			height: 1.3em;
+			border-radius: 50%;
+			font-weight: bold;
+			font-size: 2em;
+			text-align: center;
+			padding: 0 0.3em;
+			line-height: 1.17em;
+			position: absolute;
+			top: -12px;
+			right: -12px;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $dark-blue;
+				background-color: $dark-blue;
+			}
+		}
+	}
+}
+
 .btn-rounded,
 .btn-rounded:visited {
 	border-color: $dark-blue;
@@ -134,7 +202,8 @@ img {
 // specific
 
 header {
-	margin-top: 3em;
+	padding-top: 3em;
+	margin-top: 1em;
 
 	.header .nav-link,
 	.header .nav-link:visited {
@@ -394,7 +463,9 @@ footer {
 		color: $light-blue;
 	}
 
-	.btn-primary {
+	.btn-primary,
+	.btn-primary:active,
+	.btn-primary:focus {
 		border-color: $red;
 		background-color: $white;
 		color: $red;
@@ -406,6 +477,8 @@ footer {
 		text-align: center;
 		padding: 0 0.3em;
 		line-height: 1.17em;
+		outline: none;
+		box-shadow: none;
 
 		&:hover {
 			color: $white;
@@ -550,7 +623,13 @@ footer {
 	}
 }
 
+.popup-content .pathway-sections {
+	background-color: $white;
+	padding: 0;
+}
+
 .charts {
+	display: none; // will be overridden when the graph loads in
 	background-color: #f0f0f0;
 	position: relative;
 	border-top: 5px solid $red;
@@ -564,6 +643,13 @@ footer {
 	svg {
 		width: 2156px;
 		height: 1147px;
+
+		text,
+		text tspan {
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+		}
 	}
 
 	a:hover {
@@ -571,8 +657,9 @@ footer {
 			fill: $dark-blue;
 		}
 
-		text {
-			stroke: $white;
+		text,
+		text tspan {
+			fill: $white;
 		}
 	}
 
@@ -827,6 +914,7 @@ footer {
 		color: $white;
 		padding: 3em 3em 10em 3em;
 		position: relative;
+		min-width: 35em;
 	}
 
 	.btn-rounded {
@@ -915,6 +1003,7 @@ footer {
 
 .sun-container {
 	width: 100%;
+	margin-top: 10em;
 	max-width: 30rem;
 	margin-left: auto;
 
@@ -922,7 +1011,7 @@ footer {
 		width: 100%;
 		padding-bottom: 100%;
 		position: relative;
-		background-image: url(/images/sun.png);
+		background-image: url("/sites/hrcareerpathways/_catalogs/masterpage/images/sun.png");
 		background-size: cover;
 		background-position: -12px -12px;
 		background-repeat: no-repeat;
@@ -938,7 +1027,6 @@ footer {
 		-webkit-transform: translateX(-50%) translateY(-50%);
 		-ms-transform: translateX(-50%) translateY(-50%);
 		transform: translateX(-50%) translateY(-50%);
-		background-image: url("/sites/hrcareerpathways/_catalogs/masterpage/images/temp-person.png");
 		background-position: center;
 	}
 }
@@ -953,7 +1041,7 @@ footer {
 }
 
 .flag-image {
-	margin-top: 8em;
+	margin-top: 18em;
 }
 
 .search-page {
@@ -980,6 +1068,13 @@ footer {
 		h3 {
 			color: $light-blue;
 		}
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.story-item .text-container {
+		min-width: 0;
 	}
 }
 

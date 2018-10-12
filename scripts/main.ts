@@ -1,4 +1,5 @@
 import * as $ from "jquery";
+import "./lib/PathwayPopups";
 
 $(document).on("click", ".js-toggle-subnav", () => {
 	$(".subnav-link").toggleClass("active");

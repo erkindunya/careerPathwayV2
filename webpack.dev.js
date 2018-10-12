@@ -6,42 +6,36 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = merge(common, {
 	module: {
-		rules: [
-			{
-				// sass / scss loader for webpack
-				test: /\.(sass|scss)$/,
-				loader: ExtractTextPlugin.extract([
-					"css-loader?url=false",
-					"sass-loader"
-				])
-			}
-		]
+		rules: [{
+			// sass / scss loader for webpack
+			test: /\.(sass|scss)$/,
+			loader: ExtractTextPlugin.extract([
+				"css-loader?url=false",
+				"sass-loader"
+			])
+		}]
 	},
 	plugins: [
 		new FileManagerPlugin({
 			onStart: {
-				copy: [
-					{ source: "static", destination: "dist" },
-					{ source: "scripts/scrollpane.js", destination: "dist/js" }
-				]
+				copy: [{
+					source: "static",
+					destination: "dist"
+				}]
 			},
 			// Remember to update the destination to your own folder
 			onEnd: {
-				copy: [
-					{
+				copy: [{
 						source: "dist\\pages",
-						destination:
-							"\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Html"
+						destination: "\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Html"
 					},
 					{
 						source: "dist\\js",
-						destination:
-							"\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Res\\js"
+						destination: "\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Res\\js"
 					},
 					{
 						source: "dist\\css",
-						destination:
-							"\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Res\\css"
+						destination: "\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage\\Res\\css"
 					},
 					// {
 					// 	source: "dist\\images",
@@ -50,8 +44,7 @@ module.exports = merge(common, {
 					// },
 					{
 						source: "dist\\masterpage",
-						destination:
-							"\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage"
+						destination: "\\\\uat-ext.kier.group@SSL\\DavWWWRoot\\sites\\hrcareerpathways\\_catalogs\\masterpage"
 					}
 				]
 			}

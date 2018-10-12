@@ -8,7 +8,13 @@ const babelOptions = {
 module.exports = {
 	devtool: "source-map",
 	entry: {
-		main: ["babel-polyfill", "./scripts/main.ts", "./styles/main.scss"]
+		main: ["babel-polyfill", "./scripts/main.ts", "./styles/main.scss"],
+		JobLanding: ["./scripts/JobLanding.ts"],
+		CareerLanding: ["./scripts/CareerLanding.ts"],
+		CareerItem: ["./scripts/CareerItem.ts"],
+		ConvertSvg: ["./scripts/ConvertSvg.ts"],
+		JobItem: ["./scripts/JobItem.ts"],
+		Search: ["./scripts/Search.ts"]
 	},
 	output: {
 		filename: "[name].js",
@@ -19,23 +25,21 @@ module.exports = {
 		extensions: [".ts", ".js"]
 	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.ts$/,
 				exclude: /(node_modules|bower_components)/,
 				enforce: "pre",
-				use: [
-					{
-						loader: "tslint-loader",
-						options: { configFile: "./tslint.json" }
+				use: [{
+					loader: "tslint-loader",
+					options: {
+						configFile: "./tslint.json"
 					}
-				]
+				}]
 			},
 			{
 				test: /\.ts$/,
 				exclude: /(node_modules|bower_components)/,
-				use: [
-					{
+				use: [{
 						loader: "babel-loader",
 						options: babelOptions
 					},
