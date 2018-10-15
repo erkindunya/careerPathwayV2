@@ -57,7 +57,7 @@
                         </div>
                         <div class="search order-0 order-md-1">
                             <input type="text" name="search-input" id="search-input" placeholder="Search a role">
-                            <img src="/sites/hrcareerpathways/_catalogs/masterpage/images/search.png">
+                            <img class="search-button" src="/sites/hrcareerpathways/_catalogs/masterpage/images/search.png">
 
                             <div class="sub-search">
                                 <a href="#" class="nav-search-result">
@@ -148,19 +148,19 @@
                     <h4>Career Stories</h4>
                     <ul>
                         <li>
-                            <a href="">Lee Woodall</a>
+                            <a href="/sites/hrcareerpathways/Pages/Career-Story.aspx?ids=1">Lee Woodall</a>
                         </li>
                         <li>
-                            <a href="">David Hodson</a>
+                            <a href="/sites/hrcareerpathways/Pages/Career-Story.aspx?ids=2">David Hodson</a>
                         </li>
                         <li>
-                            <a href="">Ross Gallagher</a>
+                            <a href="/sites/hrcareerpathways/Pages/Career-Story.aspx?ids=3">Ross Gallagher</a>
                         </li>
                         <li>
-                            <a href="">Emma Tarrant</a>
+                            <a href="/sites/hrcareerpathways/Pages/Career-Story.aspx?ids=4">Emma Tarrant</a>
                         </li>
                         <li>
-                            <a href="">Ian Chapman</a>
+                            <a href="/sites/hrcareerpathways/Pages/Career-Story.aspx?ids=5">Ian Chapman</a>
                         </li>
                     </ul>
                 </div>

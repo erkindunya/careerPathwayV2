@@ -276,6 +276,7 @@ header {
 			width: 2.6em;
 			margin-right: 1em;
 			padding-bottom: 0.3em;
+			cursor: pointer;
 		}
 
 		&.active {
@@ -296,7 +297,7 @@ header {
 	left: -1px;
 	border: 1px solid $dark-blue;
 	border-top: none;
-	z-index: 500;
+	z-index: 901;
 	background-color: $white;
 
 	.nav-search-result {
@@ -799,6 +800,7 @@ footer {
 	}
 
 	.progression-item {
+
 		position: relative;
 		border-radius: 50%;
 		border: 1px solid $dark-blue;
@@ -807,7 +809,8 @@ footer {
 		height: 150px;
 		font-size: 1.4em;
 		text-align: center;
-		display: inline-block;
+		display: none;
+		float: left;
 		margin: 1.5em;
 		background-color: $white;
 		transition-duration: 0.15s;
@@ -1055,6 +1058,10 @@ footer {
 		p {
 			color: $red;
 		}
+	}
+
+	.error-container {
+		display: none;
 	}
 }
 

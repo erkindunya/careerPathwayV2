@@ -4,9 +4,12 @@ import { sp, Web } from "./lib/sp";
 var search = decodeURI(getParameterByName("search"));
 $("#search-term").html(search);
 
+// search sharepoint
 sp.web.lists
 	.getByTitle("Job Roles")
-	.items.filter("substringof('" + search + "',Title)")
+	.items.select("Id", "Title", "Description", "JobFamily/Title")
+	.expand("JobFamily")
+	.filter("substringof('" + search + "',Title)")
 	.get()
 	.then((items: any[]) => {
 		for (var i in items) {
@@ -21,31 +24,42 @@ sp.web.lists
 						items[i]["Id"]
 				);
 
-			switch (items[i]["JobFamily"]) {
+			switch (items[i]["JobFamily"]["Title"]) {
 				case "Group Finance and Technical Specialisms":
-					$("#temp_img").attr(
-						"src",
-						"/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance-large.png"
-					);
+					itemtemplate
+						.find("#temp_img")
+						.attr(
+							"src",
+							"/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance.png"
+						);
 					break;
 				case "Operational Finance":
-					$("#temp_img").attr(
-						"src",
-						"/sites/hrcareerpathways/_catalogs/masterpage/images/operational-finance.png"
-					);
+					itemtemplate
+						.find("#temp_img")
+						.attr(
+							"src",
+							"/sites/hrcareerpathways/_catalogs/masterpage/images/operational-finance.png"
+						);
 					break;
 				case "Finance Shared Service Centre (FSSC)":
-					$("#temp_img").attr(
-						"src",
-						"/sites/hrcareerpathways/_catalogs/masterpage/images/fssc.png"
-					);
+					itemtemplate
+						.find("#temp_img")
+						.attr(
+							"src",
+							"/sites/hrcareerpathways/_catalogs/masterpage/images/fssc.png"
+						);
 					break;
 			}
 
 			$("#results-container").append(itemtemplate);
 		}
+
+		if (items.length == 0) {
+			$(".error-container").show();
+		}
 	});
 
+//get query string parameter
 function getParameterByName(name) {
 	var url = window.location.href;
 	name = name.replace(/[\[\]]/g, "\\$&");
