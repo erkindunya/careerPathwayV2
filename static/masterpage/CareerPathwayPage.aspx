@@ -38,7 +38,7 @@
    </div>
 
     <div class="sharepoint-banner-toggle js-toggle-admin">
-        Admin
+        Admin <span>&gt;</span>
     </div>
     <header>
         <div class="header container">

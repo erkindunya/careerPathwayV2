@@ -1,11 +1,70 @@
 
-<div style="margin: 30px; width:100%"></div>
-<textarea name="txtInput" id="txtInput" placeholder="Input SVG Code"style="width: 100%;height:300px;"></textarea>
 
-<hr />
-<a id="btnComplete" href="#" class="btn">Link Up!</a>
-<hr />
-<textarea name="txtOutput" id="txtOuput" placeholder="Output SVG Code" style="width: 100%;height:300px;"></textarea>
+<div class="container svg-tool-page">
 
-<script src="/sites/hrcareerpathways/_catalogs/masterpage/res/js/ConvertSvg.js"></script>
- 
+    <h1>Career Pathways SVG Helper</h1>
+    <p>This tool is designed to help link the SVG charts with the pages that they represent. It takes SVG input and provide new SVG Output. </p>
+    
+    
+    <h3>For those who are more technical:</h3>
+    <p>To use, simple follow these steps:</p>
+    <ol>
+        <li>Copy and paste the svg code into the input below</li>
+        <li>Press "Proces" and copy the output back into the SVG file</li>
+        <li>Save and view in browser, See if any are red If so, see step 8 of the process below.</li>
+    </ol>
+
+    <h3>Easy step by step guide:</h3>
+    <p>To use, simple follow these steps:</p>
+    <ol>
+        <li>Open the SVG file in Notepad
+            <ul>
+                <li>Open Notepad</li>
+                <li>Click File -> Open</li>
+                <li>Change filetype to "All Files (*.*)"</li>
+                <li>Browse to SVG file and Open</li>
+                <li>Keep the notepad open for later use.</li>
+            </ul>
+        </li>
+        <li>Copy all the SVG code</li>
+        <li>Paste all SVG code in the Input below</li>
+        <li>Ensure the correct pathway for the SVG is selected from the drop-down list</li>
+        <li>Press the "Process" button</li>
+        <li>Copy the new SVG code from the output</li>
+        <li>Paste the code back into the SVG file open in Notepad and Save</li>
+        <li>Open the SVG in a browser to display the new SVG.</li>
+        <li>If any of the circles are red, it failed to find a link for that job. To resolve:
+            <ul>
+                <li>Check that the job exists in the sharepoint list, if not then create.</li>
+                <li>Ensure the item in the list doesnt end in a space.</li>
+                <li>Ensure the correct pathway has been selected</li>
+                <li>Press the process button again. </li>
+                <li>Repeat point 5 onwards</li>
+            </ul>
+        </li>
+        <li>When ready, upload to sharepoint</li>
+    </ol>
+    <div style="margin-top:80px;">
+
+        <h3>Input</h3> 
+         
+        <fieldset>
+        <label for="pathwaySelected"><strong>Pathway</strong> - this will be used to avoid jobs of the same name across pathways</label>
+        <select id="pathwaySelected" style="margin-bottom:15px;">
+            <option value="1">Group Finance and Technical Specialisms</option>
+            <option value="2">Operational Finance</option>
+            <option value="3">Finance Shared Service Centre (FSSC)</option>
+        </select>  
+        </fieldset>
+        <textarea name="txtInput" id="txtInput" placeholder="Input SVG Code"style="width: 100%;height:300px;"></textarea>
+
+        <hr />
+        <a id="btnComplete" href="#" class="button">Process (It may take a minute)</a>
+        <hr />
+
+        <h3>Ouput</h3>
+        <textarea name="txtOutput" id="txtOuput" placeholder="Output SVG Code" style="width: 100%;height:300px;"></textarea>
+
+    </div>
+ </div>
+    <script src="/sites/hrcareerpathways/_catalogs/masterpage/res/js/ConvertSvg.js"></script>

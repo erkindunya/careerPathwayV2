@@ -21,6 +21,7 @@ $(document).on("click", "#exploreCareer .arrow", () => {
 //toggle for sharepoint ribbon
 $(document).on("click", ".js-toggle-admin", () => {
 	$("#ms-designer-ribbon").slideToggle(200);
+	$(".js-toggle-admin span").toggleClass("active");
 });
 
 //search button is clicked
