@@ -36,11 +36,13 @@
   "dependencies": {
     "airbnb-browser-shims": "^2.1.0",
     "bootstrap": "^4.0.0",
+    "es6-promise": "^4.2.5",
     "jquery": "^3.3.1",
     "jquery-colorbox": "^1.6.4",
     "popper.js": "^1.12.9",
     "sp-pnp-js": "^3.0.10",
     "sweetalert": "^2.1.0",
-    "toastr": "^2.1.4"
+    "toastr": "^2.1.4",
+    "whatwg-fetch": "^3.0.0"
   }
 }

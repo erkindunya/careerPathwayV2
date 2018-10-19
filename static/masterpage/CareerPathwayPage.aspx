@@ -37,9 +37,20 @@
         </div>
    </div>
 
-    <div class="sharepoint-banner-toggle js-toggle-admin">
-        Admin <span>&gt;</span>
-    </div>
+   <div data-name="SecurityTrimmedAuthors">
+    <!--CS: Start Security Trim Snippet-->
+    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AllUsers" Permissions="EditListItems">-->
+        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><span><!--PE: End of READ-ONLY PREVIEW-->
+        
+            <div class="sharepoint-banner-toggle js-toggle-admin">
+                Admin <span>&gt;</span>
+            </div>
+        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--></span><!--PE: End of READ-ONLY PREVIEW-->
+    <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
+    <!--CE: End Security Trim Snippet-->
+</div>
+
     <header>
         <div class="header container">
             <div class="row">
@@ -137,7 +148,7 @@
                             <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=2">Operational Finance</a>
                         </li>
                         <li>
-                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=3">Financial Shared Service Centre FSSC</a>
+                            <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=3">Finance Shared Service Centre FSSC</a>
                         </li>
                         <li>
                             <a href="https://uat-ext.kier.group/sites/hrcareerpathways/Pages/Job-Role-Landing.aspx?ids=1">Group Finance and Technical Specialisms</a>

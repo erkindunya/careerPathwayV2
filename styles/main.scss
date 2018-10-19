@@ -39,7 +39,7 @@ $red: #e40520;
   max-width: none !important;
 }
 
-.ms-siteactions-imgspan > .ms-core-menu-buttonIcon {
+.ms-siteactions-imgspan>.ms-core-menu-buttonIcon {
   max-width: none !important;
   box-sizing: content-box !important;
 }
@@ -332,6 +332,7 @@ header {
 
     img {
       width: 26px;
+      height: auto;
       vertical-align: middle;
     }
 
@@ -869,11 +870,24 @@ footer {
     padding-bottom: 8em;
   }
 
-  .bg-face {
+  .bg-group-finance {
     background-image: url("/sites/hrcareerpathways/_catalogs/masterpage/images/group-finance-bg.png");
     background-position: right center;
     background-repeat: no-repeat;
   }
+
+  .bg-fssc {
+    background-image: url("/sites/hrcareerpathways/_catalogs/masterpage/images/fssc-bg.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-operational-finance {
+    background-image: url("/sites/hrcareerpathways/_catalogs/masterpage/images/operational-finance-bg.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
 
   .btn-rounded {
     margin-top: 0.6em;
@@ -934,6 +948,7 @@ footer {
     padding: 3em 3em 10em 3em;
     position: relative;
     min-width: 35em;
+    flex-grow: 1 !important;
   }
 
   .btn-rounded {
@@ -1134,6 +1149,7 @@ footer {
 // media queries
 @media (max-width: 992px) {
   header {
+
     .header a,
     .header a:visited {
       padding: 0 0.9em;
